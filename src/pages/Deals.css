@@ -1,0 +1,56 @@
+.page-hero-deals {
+  background: linear-gradient(135deg, #7c1a1a 0%, #c0392b 100%) !important;
+}
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) { .deals-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .deals-grid { grid-template-columns: 1fr; } }
+
+.deal-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.deal-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.deal-img {
+  position: relative;
+  background: var(--gray-light);
+  height: 180px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 80px;
+}
+.deal-tag {
+  position: absolute; top: 12px; left: 12px;
+  background: #e8304a; color: white;
+  font-size: 12px; font-weight: 800;
+  padding: 4px 12px; border-radius: 50px;
+}
+.deal-info { padding: 20px; }
+.deal-save {
+  display: inline-block;
+  background: rgba(16,185,129,0.12);
+  color: #10b981;
+  padding: 3px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.product-brand { font-size: 11px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+.product-name { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 10px; }
+.product-price-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.product-price { font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--secondary); }
+.product-old { font-size: 14px; color: var(--text-light); text-decoration: line-through; }
+.product-add {
+  width: 100%; padding: 11px;
+  background: var(--primary); color: white;
+  border: none; border-radius: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: var(--transition); font-family: var(--font-body);
+}
+.product-add:hover { background: var(--secondary); }
